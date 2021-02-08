@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="news_title">#000000</color>
+    <color name="news_label_text">#999999</color>
+    <color name="news_tab_title">#FFFFFF</color>
+    <color name="news_tab_title_select">#8C95EA</color>
+    <color name="news_tab_divider">#7FBDBDBD</color>
+</resources>

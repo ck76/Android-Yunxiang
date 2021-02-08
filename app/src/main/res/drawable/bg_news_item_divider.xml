@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="1px" />
+            <padding
+                android:left="@dimen/news_padding_left"
+                android:right="@dimen/news_padding_right" />
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="1px" />
+            <solid android:color="@color/news_tab_divider" />
+        </shape>
+    </item>
+</layer-list>
+
+

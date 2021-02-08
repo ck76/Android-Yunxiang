@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/personal_item_container">
+
+    <ImageView
+        android:id="@+id/img_cover"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="8dp"
+        tools:background="@color/black" />
+
+    <TextView
+        android:id="@+id/txt_goods_title"
+        style="@style/personal_item_title"
+        android:layout_alignTop="@id/img_cover"
+        android:layout_toEndOf="@id/img_cover"
+        tools:text="商品名称 一行只能显示到这个位置多的换行XXXXX" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/txt_goods_price"
+        android:layout_alignStart="@id/txt_goods_title"
+        android:layout_marginBottom="4dp">
+
+        <include layout="@layout/price_item_element_change" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txt_goods_price"
+        style="@style/personal_item_price"
+        android:layout_alignBottom="@id/img_cover"
+        android:layout_toEndOf="@id/img_cover"
+        tools:text="¥ 200,000" />
+
+    <TextView
+        android:id="@+id/txt_buyout"
+        style="@style/personal_item_buyout"
+        android:layout_alignBottom="@id/img_cover"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/txt_auction"
+        style="@style/personal_item_auction"
+        android:layout_alignBottom="@id/img_cover"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@id/txt_buyout"
+        android:visibility="gone" />
+
+</RelativeLayout>

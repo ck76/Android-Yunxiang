@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="personal_item_price">#FF7C3C</color>
+    <color name="personal_buyout">#2B8704</color>
+    <color name="personal_auction">#FFBA02</color>
+    <color name="personal_evaluating">#FF7C3C</color>
+    <color name="personal_evaluate_success">#2B8704</color>
+    <color name="personal_row_title">#1826B0</color>
+
+    <color name="bg_list">#F3F4FC</color>
+
+
+
+</resources>

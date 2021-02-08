@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:orientation="vertical">
+
+    <com.neuqer.android.ui.tab.PagerSlidingTab
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginStart="@dimen/news_padding_right"
+        android:layout_marginEnd="@dimen/news_padding_left"
+        apps:pstIndicatorHeight="0dp"
+        apps:pstTabInterval="20dp"
+        apps:pstTabPaddingLeftRight="0dp"
+        apps:pstTabTextColor="@color/news_tab_title_selector"
+        apps:pstTabTextSize="16sp" />
+
+    <include layout="@layout/divider_line" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="8dp"
+        android:background="@drawable/bg_list_container" />
+
+</LinearLayout>

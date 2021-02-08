@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="news_padding_top">0dp</dimen>
+    <dimen name="news_padding_bottom">8dp</dimen>
+    <dimen name="news_padding_left">16dp</dimen>
+    <dimen name="news_padding_right">16dp</dimen>
+
+    <dimen name="news_label_height">18dp</dimen>
+    <dimen name="news_label_text_size">12sp</dimen>
+    <dimen name="news_title_size">16sp</dimen>
+    <dimen name="news_divider_line_height">1px</dimen>
+</resources>

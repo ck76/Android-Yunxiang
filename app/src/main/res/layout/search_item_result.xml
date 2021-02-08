@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="12dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="12dp"
+    android:paddingBottom="8dp">
+
+
+    <ImageView
+        android:id="@+id/img_cover"
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        android:layout_marginEnd="12dp"
+        android:scaleType="centerCrop"
+        tools:background="@color/black" />
+
+
+    <TextView
+        android:id="@+id/txt_goods_title"
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/img_cover"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@id/img_cover"
+        android:alpha="0.8"
+        android:maxLines="2"
+        android:textColor="@color/price_goods_title"
+        android:textSize="16sp"
+        tools:text="商品商品商品商品商品商品商品创造性操作程序存在小城镇" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_price_container"
+        android:layout_marginBottom="8dp"
+        android:layout_toEndOf="@id/img_cover">
+
+        <include layout="@layout/price_item_element_change" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_price_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img_cover"
+        android:layout_toEndOf="@id/img_cover">
+
+        <TextView
+            android:id="@+id/txt_goods_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="2"
+            android:textColor="@color/personal_item_price"
+            android:textSize="18sp"
+            tools:text="¥ 200,000" />
+
+        <TextView
+            android:id="@+id/txt_auction"
+            style="@style/personal_item_auction"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_buyout"
+            style="@style/personal_item_buyout"
+            android:layout_marginStart="8dp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+</RelativeLayout>

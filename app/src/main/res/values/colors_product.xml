@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="product_bg">#1A8C95EA</color>
+    <color name="product_detail_title">#08176d</color>
+    <color name="product_detail_label">#8C95EA</color>
+</resources>

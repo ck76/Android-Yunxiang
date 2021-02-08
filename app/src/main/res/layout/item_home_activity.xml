@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.neuqer.android.ui.DynamicNumImgView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_activity"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp" />

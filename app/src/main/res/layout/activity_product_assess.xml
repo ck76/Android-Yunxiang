@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_toolbar_product" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_product_appointment"
+        android:layout_below="@+id/toolbar_product"
+        android:background="@color/product_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/product_standard_margin_s2"
+            android:paddingTop="@dimen/product_standard_margin_s1"
+            android:paddingRight="@dimen/product_standard_margin_s2">
+
+            <com.yunxiang.android.product.view.custom.SimpleItemView
+                android:id="@+id/item_product_name"
+                style="@style/product_publish_item"
+                app:hasIcon="false"
+                app:simple_hint="请输入商品名"
+                app:simple_title="商品名称"
+                app:simple_type="edit" />
+
+            <com.yunxiang.android.product.view.custom.SimpleItemView
+                android:id="@+id/item_product_category"
+                style="@style/product_publish_item"
+                app:hasIcon="true"
+                app:simple_hint="请选择商品品类"
+                app:simple_title="商品品类"
+                app:simple_type="text" />
+
+            <com.yunxiang.android.product.view.custom.SimpleItemView
+                android:id="@+id/item_product_appointment_time"
+                style="@style/product_publish_item"
+                app:hasIcon="true"
+                app:simple_hint="请选预约时间"
+                app:simple_title="预约时间"
+                app:simple_type="text" />
+
+            <com.yunxiang.android.product.view.custom.SimpleItemView
+                android:id="@+id/item_product_phone_number"
+                style="@style/product_publish_item"
+                app:hasIcon="false"
+                app:simple_hint="请输入手机号"
+                app:simple_title="联系方式"
+                app:simple_type="edit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/product_standard_margin_s1"
+                android:layout_marginBottom="@dimen/product_standard_margin_s1"
+                android:text="@string/txt_title_product_detail"
+                android:textColor="@color/main_text"
+                android:textSize="@dimen/product_primary_text" />
+
+            <include layout="@layout/item_product_input_detail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/product_standard_margin_s2"
+                android:layout_marginBottom="8dp"
+                android:text="@string/txt_title_product_image"
+                android:textColor="@color/main_text"
+                android:textSize="@dimen/product_primary_text" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_product_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/ll_product_appointment"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_product_assess_assess"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/product_standard_margin_s1"
+            android:background="@drawable/bg_product_btn_publish"
+            android:text="@string/btn_product_publish"
+            android:textColor="@color/accent" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignTop="@id/ll_product_appointment"
+        android:background="@color/divider" />
+</RelativeLayout>

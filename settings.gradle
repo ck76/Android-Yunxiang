@@ -1,0 +1,74 @@
+include ':app'
+include ':sample'
+
+rootProject.name = "SimpleAndroid"
+
+def deps = [:]
+
+def android = [
+        v4          : "com.android.support:support-v4:${V4}",
+        v7          : "com.android.support:appcompat-v7:${V7}",
+        recyclerview: "com.android.support:recyclerview-v7:${RECYCLERVIEW}",
+        design      : "com.android.support:design:${DESIGN}",
+        paging      : "android.arch.paging:runtime:${PAGING_VERSION}",
+        lifecycle   : "android.arch.lifecycle:extensions:${LIFECYCLE_VERSION}",
+        db_room     : "android.arch.persistence.room:runtime:${DB_ROOM_VERSION}",
+        annotation  : "com.android.support:support-annotations:${ANNOTATION}"
+]
+
+def tools = [
+        butterknife          : "com.jakewharton:butterknife:${BUTTER_KNIFE}",
+        glide                : "com.github.bumptech.glide:glide:${GLIDE_VERSION}",
+        retrofit             : "com.squareup.retrofit2:retrofit:${RETROFIT_VERSION}",
+        retrofit_convert_gson: "com.squareup.retrofit2:converter-gson:${RETROFIT_VERSION}",
+        okhttp_logging       : "com.squareup.okhttp3:logging-interceptor:${OK_HTTP_VERSION}",
+        gson                 : "com.google.code.gson:gson:${GSON_VERSION}",
+        chart                : "com.github.PhilJay:MPAndroidChart:${CHART_VERSION}",
+        sonic                : "com.tencent.sonic:sdk:${SONIC_VERSION}",
+        agentweb             : "com.just.agentweb:agentweb:${AGENT_WEB_VERSION}",
+        rxjava               : "io.reactivex.rxjava2:rxjava:${RX_JAVA_VERSION}",
+        rxandroid            : "io.reactivex.rxjava2:rxandroid:${RX_ANDROID_VERSION}",
+        flowlayout           : "com.hyman:flowlayout-lib:${FLOW_LAYOUT_VERSION}",
+        matisse              : "com.zhihu.android:matisse:${MATISSE_VERSION}",
+        picker_view          : "com.contrarywind:Android-PickerView:${PICKER_VIEW_VERSION}"
+]
+
+def project = [
+        lib_runtime   : includeProject(":lib-runtime"),
+        lib_config    : includeProject(":lib-config"),
+        lib_ui        : includeProject(":lib-ui"),
+        lib_util      : includeProject(":lib-util"),
+        lib_permission: includeProject(":lib-permission"),
+        lib_img_loader: includeProject(":lib-img-loader"),
+        lib_network   : includeProject(":lib-network"),
+        lib_cache     : includeProject(":lib-cache"),
+        lib_scheme    : includeProject(":lib-scheme"),
+        lib_webview   : includeProject(":lib-webview"),
+        lib_mock      : includeProject(":lib-mock"),
+        lib_splash    : includeProject(":lib-splash"),
+        lib_payment   : includeProject(":lib-payment"),
+        lib_debug     : includeProject(":lib-debug")
+]
+
+def processor = [
+        butterknife_apt: "com.jakewharton:butterknife-compiler:${BUTTER_KNIFE}",
+        glide_apt      : "com.github.bumptech.glide:compiler:${GLIDE_VERSION}",
+        db_room_apt    : "android.arch.persistence.room:compiler:${DB_ROOM_VERSION}"
+]
+
+def debug = [
+        debug_db: "com.amitshekhar.android:debug-db:${DEBUG_DB_VERSION}"
+]
+
+deps.android = android
+deps.tools = tools
+deps.project = project
+deps.processor = processor
+deps.debug = debug
+
+def includeProject(def projectPath) {
+    include projectPath
+    return project(projectPath)
+}
+
+gradle.ext.deps = deps

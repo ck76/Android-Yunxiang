@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_titile_size">18sp</dimen>
+    <dimen name="login_text_size">14sp</dimen>
+    <dimen name="login_tips_size">10sp</dimen>
+    <dimen name="login_hint_size">12sp</dimen>
+    <dimen name="login_radian_big">6.67dp</dimen>
+    <dimen name="login_radian_small">3.33dp</dimen>
+</resources>

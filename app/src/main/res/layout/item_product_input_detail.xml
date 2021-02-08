@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/bg_product_edit_common">
+
+    <EditText
+        android:id="@+id/edit_product_input_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_product_edit_common"
+        android:gravity="start"
+        android:hint="请输入商品详情"
+        android:inputType="textMultiLine"
+        android:padding="8dp"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/product_secondary_text" />
+
+</FrameLayout>
+

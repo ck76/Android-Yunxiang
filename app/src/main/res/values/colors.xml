@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#1826B0</color>
+    <color name="primary_dark">#FFFFFF</color>
+    <color name="primary_light">#8C95EA</color>
+    <color name="accent">#2B8704</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+
+    <color name="main_tab_text_normal">#A0A0A0</color>
+
+    <!--UI给的色号-->
+    <color name="main">#1826B0</color>
+    <color name="selected">#071272</color>
+    <color name="light">#8C95EA</color>
+
+    <color name="warning">#C50019</color>
+    <color name="true_green">#2b8704</color>
+    <color name="secondary_guide">#FFBA02</color>
+
+    <color name="disable">#A0A0A0</color>
+    <color name="main_text">#161616</color>
+    <color name="white_text">#FFF</color>
+
+    <color name="gray_login">#BBBBBB</color>
+
+    <!--渐变色-->
+    <color name="primary_gradient_start">#7F6E96FC</color>
+    <color name="primary_gradient_center">#7F988FF1</color>
+    <color name="primary_gradient_end">#7FAF8CEA</color>
+
+
+
+</resources>

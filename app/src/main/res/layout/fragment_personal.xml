@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_list">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_gradient" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:alpha="0.4"
+        android:background="@color/white" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_user_container"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:paddingStart="@dimen/personal_item_padding_left"
+        android:paddingEnd="@dimen/personal_item_padding_right">
+
+        <ImageView
+            android:id="@+id/img_user_avatar"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="24dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/txt_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/img_user_avatar"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/img_user_avatar"
+            android:maxLines="1"
+            android:text="@string/personal_default_username"
+            android:textColor="@color/personal_row_title"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_user_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/img_user_avatar"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@id/img_user_avatar"
+            android:maxLines="1"
+            android:text="@string/personal_default_sign"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="14dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_more" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_goods_row_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_user_container"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_list_container"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="@dimen/personal_item_padding_left"
+            android:paddingEnd="@dimen/personal_item_padding_right"
+            android:text="@string/personal_row_goods"
+            android:textColor="@color/personal_row_title"
+            android:textSize="16sp" />
+
+        <com.neuqer.android.ui.RowLayout
+            android:id="@+id/row_release"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/personal_item_height"
+            android:paddingStart="@dimen/personal_item_padding_left"
+            android:paddingEnd="@dimen/personal_item_padding_right"
+            app:row_icon="@drawable/ic_row_release"
+            app:row_more_icon="@drawable/ic_more"
+            app:row_more_visibility="visible"
+            app:row_text="@string/personal_title_release" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/bg_list" />
+
+        <com.neuqer.android.ui.RowLayout
+            android:id="@+id/row_follow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/personal_item_height"
+            android:paddingStart="@dimen/personal_item_padding_left"
+            android:paddingEnd="@dimen/personal_item_padding_right"
+            app:row_icon="@drawable/ic_row_follow"
+            app:row_more_icon="@drawable/ic_more"
+            app:row_more_visibility="visible"
+            app:row_text="@string/personal_title_follow" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/bg_list" />
+
+        <com.neuqer.android.ui.RowLayout
+            android:id="@+id/row_evaluate"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/personal_item_height"
+            android:paddingStart="@dimen/personal_item_padding_left"
+            android:paddingEnd="@dimen/personal_item_padding_right"
+            app:row_icon="@drawable/ic_row_evaluate"
+            app:row_more_icon="@drawable/ic_more"
+            app:row_more_visibility="visible"
+            app:row_text="@string/personal_title_evaluate" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_order_row_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_goods_row_container"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="@dimen/personal_item_padding_left"
+            android:paddingEnd="@dimen/personal_item_padding_right"
+            android:text="@string/personal_row_order"
+            android:textColor="@color/personal_row_title"
+            android:textSize="16sp" />
+
+
+        <com.neuqer.android.ui.RowLayout
+            android:id="@+id/row_order_buy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/personal_item_height"
+            android:paddingStart="@dimen/personal_item_padding_left"
+            android:paddingEnd="@dimen/personal_item_padding_right"
+            app:row_icon="@drawable/ic_row_order_buy"
+            app:row_more_icon="@drawable/ic_more"
+            app:row_more_visibility="visible"
+            app:row_text="@string/personal_title_order_buy" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/bg_list" />
+
+        <com.neuqer.android.ui.RowLayout
+            android:id="@+id/row_order_sell"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/personal_item_height"
+            android:paddingStart="@dimen/personal_item_padding_left"
+            android:paddingEnd="@dimen/personal_item_padding_right"
+            app:row_icon="@drawable/ic_row_order_sell"
+            app:row_more_icon="@drawable/ic_more"
+            app:row_more_visibility="visible"
+            app:row_text="@string/personal_title_order_sell" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_order_row_container"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="@dimen/personal_item_padding_left"
+            android:paddingEnd="@dimen/personal_item_padding_right"
+            android:text="@string/personal_row_common"
+            android:textColor="@color/personal_row_title"
+            android:textSize="16sp" />
+
+        <com.neuqer.android.ui.RowLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/personal_item_height"
+            android:paddingStart="@dimen/personal_item_padding_left"
+            android:paddingEnd="@dimen/personal_item_padding_right"
+            app:row_icon="@drawable/ic_row_safe"
+            app:row_more_icon="@drawable/ic_more"
+            app:row_more_visibility="visible"
+            app:row_text="@string/personal_title_account_safe" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/bg_list" />
+
+        <com.neuqer.android.ui.RowLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/personal_item_height"
+            android:paddingStart="@dimen/personal_item_padding_left"
+            android:paddingEnd="@dimen/personal_item_padding_right"
+            app:row_icon="@drawable/ic_row_setting"
+            app:row_more_icon="@drawable/ic_more"
+            app:row_more_visibility="visible"
+            app:row_text="@string/personal_title_setting" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

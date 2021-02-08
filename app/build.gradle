@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+    buildTypes {
+        debug {
+            buildConfigField("String", "API_BASE_URL", "\"http://cloudthink.elatis.cn/\"")
+            minifyEnabled false
+        }
+        release {
+            buildConfigField("String", "API_BASE_URL", "\"\"")
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+repositories {
+    flatDir {
+        rootProject.allprojects.each {
+            dirs project(it.path).file('libs')
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.android.v4
+    implementation deps.android.v7
+    implementation deps.android.recyclerview
+    implementation deps.android.design
+    implementation deps.android.db_room
+    implementation deps.android.paging
+    implementation deps.android.lifecycle
+    implementation deps.project.lib_runtime
+    implementation deps.project.lib_ui
+    implementation deps.project.lib_util
+    implementation deps.project.lib_img_loader
+    implementation deps.project.lib_network
+    implementation deps.project.lib_cache
+    implementation deps.project.lib_webview
+    implementation deps.project.lib_scheme
+    implementation deps.project.lib_mock
+    implementation deps.project.lib_splash
+    implementation deps.project.lib_permission
+    implementation deps.project.lib_payment
+
+    implementation deps.tools.butterknife
+    implementation deps.tools.chart
+    implementation deps.tools.rxjava
+    implementation deps.tools.rxandroid
+    implementation deps.tools.flowlayout
+    implementation deps.tools.matisse
+    implementation deps.tools.picker_view
+
+
+    annotationProcessor deps.processor.butterknife_apt
+    annotationProcessor deps.processor.db_room_apt
+
+    debugImplementation deps.debug.debug_db
+}

@@ -1,0 +1,78 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "02f91a93f050824baae57d8b650ab805",
+    "entities": [
+      {
+        "tableName": "news_list",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `tab_id` INTEGER NOT NULL, `news_id` TEXT, `layout` TEXT, `data` TEXT, `is_read` INTEGER NOT NULL, `ext` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "mId",
+            "columnName": "_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mTabId",
+            "columnName": "tab_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mNewsId",
+            "columnName": "news_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mLayout",
+            "columnName": "layout",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mData",
+            "columnName": "data",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mIsRead",
+            "columnName": "is_read",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mExt",
+            "columnName": "ext",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_news_list_news_id",
+            "unique": true,
+            "columnNames": [
+              "news_id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_news_list_news_id` ON `${TABLE_NAME}` (`news_id`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"02f91a93f050824baae57d8b650ab805\")"
+    ]
+  }
+}

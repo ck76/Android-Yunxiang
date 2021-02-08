@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.neuqer.android.ui.ScrollBanViewPager
+        android:id="@+id/main_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_tab_strip" />
+
+
+    <com.neuqer.android.ui.tab.GradientTabStrip
+        android:id="@+id/main_tab_strip"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:textColor="@color/main_tab_text_selector"
+        android:textSize="10sp"
+        app:gtsCenterGap="36dp"
+        app:gtsDrawableHeight="24dp"
+        app:gtsDrawablePadding="2dp"
+        app:gtsDrawableWidth="24dp" />
+
+    <include
+        layout="@layout/divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/main_tab_strip" />
+
+
+    <ImageView
+        android:id="@+id/main_tab_center_plus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/main_tab_strip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_main_more_menu" />
+</RelativeLayout>

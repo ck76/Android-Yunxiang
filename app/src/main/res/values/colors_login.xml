@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="login_title">#1826B0</color>
+    <color name="login_green">#2b8704</color>
+    <color name="login_hint">#CCA0A0A0</color>
+    <color name="login_tips_grey">#898989</color>
+    <color name="login_tips_white">#FFFFFF</color>
+    <color name="login_line">#4D8C95EA</color>
+</resources>

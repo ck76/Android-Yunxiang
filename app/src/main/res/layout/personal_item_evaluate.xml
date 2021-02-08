@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/personal_item_container">
+
+    <ImageView
+        android:id="@+id/img_cover"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="8dp"
+        tools:background="@color/black" />
+
+    <TextView
+        android:id="@+id/txt_goods_title"
+        style="@style/personal_item_title"
+        android:layout_alignTop="@id/img_cover"
+        android:layout_toEndOf="@id/img_cover"
+        tools:text="商品商品商品商品商品商品商品创造性操作程序存在小城镇" />
+
+
+    <TextView
+        android:id="@+id/txt_goods_price"
+        style="@style/personal_item_price"
+        android:layout_alignBottom="@id/img_cover"
+        android:layout_toEndOf="@id/img_cover"
+        tools:text="¥ 200,000" />
+
+    <TextView
+        android:id="@+id/txt_evaluate_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img_cover"
+        android:layout_alignParentEnd="true"
+        android:textSize="12sp"
+        tools:text="评估成功" />
+
+</RelativeLayout>

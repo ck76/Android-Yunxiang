@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar_product"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/product_toolbar_height"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/img_product_back"
+        android:layout_width="32dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:padding="11dp"
+        android:src="@drawable/ic_back" />
+
+    <TextView
+        android:id="@+id/txt_product_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="product标题"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+</RelativeLayout>

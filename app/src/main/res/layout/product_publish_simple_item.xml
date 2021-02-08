@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/product_publish_item_height"
+    android:orientation="horizontal"
+    android:padding="2dp">
+
+    <TextView
+        android:id="@+id/tv_product_publish_item_title"
+        android:layout_width="56dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="16dp"
+        android:gravity="end|center"
+        android:textSize="@dimen/product_primary_text"
+        tools:text="我是伟大的喵" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/edit_product_publish_item_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_product_edit_common"
+            android:inputType="text"
+            android:paddingStart="16dp"
+            android:paddingTop="7.67dp"
+            android:paddingBottom="7.67dp"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/product_secondary_text"
+            tools:hint="请输入喵" />
+
+        <FrameLayout
+            android:id="@+id/fl_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/btn_product_publish_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_product_edit_common"
+                android:paddingStart="16dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/product_secondary_text"
+                android:visibility="gone"
+                tools:text="时间选择" />
+
+            <ImageView
+                android:id="@+id/img_product_publish_item_down"
+                android:layout_width="10dp"
+                android:layout_height="6dp"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/ic_down_select" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

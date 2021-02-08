@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="product_primary_text">14sp</dimen>
+    <dimen name="product_secondary_text">12sp</dimen>
+    <dimen name="product_hint_text">12sp</dimen>
+
+    <dimen name="product_toolbar_height">46dp</dimen>
+
+    <dimen name="product_standard_margin_s1">8dp</dimen>
+    <dimen name="product_standard_margin_s2">16dp</dimen>
+    <dimen name="product_publish_item_height">32dp</dimen>
+
+    <dimen name="product_radian_small">3.33dp</dimen>
+    
+    <dimen name="product_grid_expected_size">72dp</dimen>
+</resources>

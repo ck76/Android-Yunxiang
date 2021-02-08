@@ -1,0 +1,100 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorControlNormal">@android:color/white</item>
+        <!-- 解决启动白屏问题-->
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <!--登录模块-->
+
+
+    <!--行情-->
+    <style name="price_item_info">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="price_item_info_title" parent="price_item_info">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="product_publish_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/product_publish_item_height</item>
+        <item name="android:layout_marginBottom">@dimen/product_standard_margin_s1</item>
+    </style>
+
+
+    <!--个人-->
+    <style name="personal_item_container">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingEnd">8dp</item>
+    </style>
+
+    <style name="personal_item_title">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">233dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:alpha">0.8</item>
+        <item name="android:textColor">@color/price_goods_title</item>
+    </style>
+
+    <style name="personal_item_price">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">#FF7C3C</item>
+    </style>
+
+
+    <style name="personal_item_base_buyout">
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingStart">6dp</item>
+        <item name="android:paddingEnd">6dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="personal_item_buyout" parent="personal_item_base_buyout">
+        <item name="android:textColor">@color/personal_buyout</item>
+        <item name="android:background">@drawable/bg_btn_buyout</item>
+        <item name="android:text">@string/personal_buyout</item>
+    </style>
+
+    <style name="personal_item_auction" parent="personal_item_base_buyout">
+        <item name="android:textColor">@color/personal_auction</item>
+        <item name="android:background">@drawable/bg_btn_auction</item>
+        <item name="android:text">@string/personal_auction</item>
+    </style>
+
+    <!--Product-->
+    <style name="bidding_checkbox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/bg_product_checkbox_bidding</item>
+    </style>
+
+    <style name="no_bargain_checkbox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/bg_product_checkbox_no_bargain</item>
+    </style>
+
+
+    <style name="search_result_tab_title_size">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+</resources>

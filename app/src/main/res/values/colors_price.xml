@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="price_chart_rise">#F47B7C</color>
+    <color name="price_chart_drop">#477EEA</color>
+    <color name="price_chart_title">#071272</color>
+    <color name="price_chart_subtitle">#A0A0A0</color>
+
+    <color name="price_goods_title">#252E30</color>
+    <color name="price_goods_label">#979797</color>
+    <color name="price_goods_rise">#C50019</color>
+    <color name="price_goods_drop">#2B8704</color>
+
+    <color name="price_feed_background">#F5F5F5</color>
+    <color name="price_bg_card">#F7F4FD</color>
+    <color name="price_item_order">#1826B0</color>
+
+    <color name="price_search_history">#8C95EA</color>
+
+    <color name="search_result_filter">#2B8704</color>
+
+</resources>
